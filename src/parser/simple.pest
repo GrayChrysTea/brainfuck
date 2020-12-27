@@ -1,0 +1,21 @@
+LEFT_BRACKET = @{"["}
+RIGHT_BRACKET = @{"]"}
+INCREMENT = @{"+"}
+DECREMENT = @{"-"}
+TO_NEXT = @{">"}
+TO_PREV = @{"<"}
+OUTPUT = @{"."}
+INPUT = @{","}
+RESERVED = {(
+      LEFT_BRACKET
+    | RIGHT_BRACKET
+    | INCREMENT
+    | DECREMENT
+    | TO_NEXT
+    | TO_PREV
+    | OUTPUT
+    | INPUT
+)}
+UNRESERVED = _{(!(RESERVED | WHITESPACE) ~ ANY)}
+WHITESPACE = _{(" " | "\t" | NEWLINE)}
+FILE = _{ SOI ~ UNRESERVED* ~ (RESERVED ~ UNRESERVED*)* ~ EOI}

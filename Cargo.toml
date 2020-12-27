@@ -1,0 +1,24 @@
+[package]
+name = "brainfuck"
+version = "0.2.2"
+authors = ["GrayChrysTea"]
+edition = "2018"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+clap = "~2.33.3"
+pest = "~2.1.0"
+pest_derive = "~2.1.0"
+
+[lib]
+name = "brainfucklib"
+crate-type = ["rlib", "cdylib"]
+test = false
+bench = false
+
+[[bin]]
+name = "brainfuck"
+path = "src/bin/brainfuck/main.rs"
