@@ -17,7 +17,7 @@ use std::{
     rc::Rc,
 };
 
-const VERSION_NO: &'static str = "0.2.2";
+const VERSION_NO: &'static str = "0.3.0a";
 
 macro_rules! someerror {
     ($last: expr, $code: expr) => {
